@@ -1,0 +1,202 @@
+[
+    {
+      "id": 1,
+      "name": "Legal Assistant"
+    },
+    {
+      "id": 2,
+      "name": "Senior Sales Associate"
+    },
+    {
+      "id": 3,
+      "name": "Librarian"
+    },
+    {
+      "id": 4,
+      "name": "Account Representative II"
+    },
+    {
+      "id": 5,
+      "name": "Senior Developer"
+    },
+    {
+      "id": 6,
+      "name": "Biostatistician III"
+    },
+    {
+      "id": 7,
+      "name": "Assistant Professor"
+    },
+    {
+      "id": 8,
+      "name": "Food Chemist"
+    },
+    {
+      "id": 9,
+      "name": "Systems Administrator II"
+    },
+    {
+      "id": 10,
+      "name": "Paralegal"
+    },
+    {
+      "id": 11,
+      "name": "Administrative Assistant I"
+    },
+    {
+      "id": 12,
+      "name": "Data Coordiator"
+    },
+    {
+      "id": 13,
+      "name": "Tax Accountant"
+    },
+    {
+      "id": 14,
+      "name": "Administrative Officer"
+    },
+    {
+      "id": 15,
+      "name": "Operator"
+    },
+    {
+      "id": 16,
+      "name": "Recruiter"
+    },
+    {
+      "id": 17,
+      "name": "Community Outreach Specialist"
+    },
+    {
+      "id": 18,
+      "name": "General Manager"
+    },
+    {
+      "id": 19,
+      "name": "Internal Auditor"
+    },
+    {
+      "id": 20,
+      "name": "Engineer II"
+    },
+    {
+      "id": 21,
+      "name": "Payment Adjustment Coordinator"
+    },
+    {
+      "id": 22,
+      "name": "Cost Accountant"
+    },
+    {
+      "id": 23,
+      "name": "Office Assistant IV"
+    },
+    {
+      "id": 24,
+      "name": "Registered Nurse"
+    },
+    {
+      "id": 25,
+      "name": "VP Marketing"
+    },
+    {
+      "id": 26,
+      "name": "Programmer Analyst II"
+    },
+    {
+      "id": 27,
+      "name": "VP Marketing"
+    },
+    {
+      "id": 28,
+      "name": "Information Systems Manager"
+    },
+    {
+      "id": 29,
+      "name": "Environmental Specialist"
+    },
+    {
+      "id": 30,
+      "name": "Executive Secretary"
+    },
+    {
+      "id": 31,
+      "name": "Accountant II"
+    },
+    {
+      "id": 32,
+      "name": "Graphic Designer"
+    },
+    {
+      "id": 33,
+      "name": "Information Systems Manager"
+    },
+    {
+      "id": 34,
+      "name": "Operator"
+    },
+    {
+      "id": 35,
+      "name": "Human Resources Manager"
+    },
+    {
+      "id": 36,
+      "name": "Compensation Analyst"
+    },
+    {
+      "id": 37,
+      "name": "VP Marketing"
+    },
+    {
+      "id": 38,
+      "name": "Actuary"
+    },
+    {
+      "id": 39,
+      "name": "Analog Circuit Design manager"
+    },
+    {
+      "id": 40,
+      "name": "Accounting Assistant III"
+    },
+    {
+      "id": 41,
+      "name": "Physical Therapy Assistant"
+    },
+    {
+      "id": 42,
+      "name": "Account Representative I"
+    },
+    {
+      "id": 43,
+      "name": "Programmer Analyst III"
+    },
+    {
+      "id": 44,
+      "name": "Software Consultant"
+    },
+    {
+      "id": 45,
+      "name": "Database Administrator II"
+    },
+    {
+      "id": 46,
+      "name": "Geologist III"
+    },
+    {
+      "id": 47,
+      "name": "Pharmacist"
+    },
+    {
+      "id": 48,
+      "name": "Geological Engineer"
+    },
+    {
+      "id": 49,
+      "name": "Associate Professor"
+    },
+    {
+      "id": 50,
+      "name": "Staff Scientist"
+    }
+  ]
