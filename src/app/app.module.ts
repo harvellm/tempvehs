@@ -17,7 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSortModule} from '@angular/material/sort';
 import { SummaryComponent } from './components/summary/summary.component';
-
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { SummaryComponent } from './components/summary/summary.component';
     MatInputModule,
     MatCardModule,
     MatGridListModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

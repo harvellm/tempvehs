@@ -1,3 +1,4 @@
+<div class="mgh-table-container">
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
@@ -25,9 +26,11 @@
     ></tr>
 
   </table>
+  <div style="margin:10px 450px 0 0;">
   <mat-paginator [pageSizeOptions]="[5, 10, 20]"
     showFirstLastButtons>
 </mat-paginator>
+  </div>
   <!-- <div>
     <h3>
       Click Log
@@ -43,3 +46,4 @@
       Clicked on {{clickedRow.id}}
     </li>
   </ul> -->
+</div>

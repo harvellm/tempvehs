@@ -1,18 +1,24 @@
 .demo-table {
-    width: 100%;
-  }
-  
-  .mat-row .mat-cell {
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
-    cursor: pointer;
-  }
-  
-  .mat-row:hover .mat-cell {
-    border-color: currentColor;
-  }
-  
-  .demo-row-is-clicked {
-    font-weight: bold;
-  }
+  width: 70vw;
+  margin-left:10px;
+}
 
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+.mgh-table-container{
+  position:relative;
+  left:9vw;
+  margin:20px;
+}

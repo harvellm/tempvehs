@@ -1,3 +1,12 @@
+<div style="display:fixed;height:20vh;width:100%;top:0;left:0;background-color:darkkhaki;">
+    <div class="example-button-row">
+        <button (click)="toUser()" mat-button>Users Only</button>
+        <button (click)="toRole()" mat-button color="primary">Roles Only</button>
+        <button (click)="toLocation()" mat-button color="accent">Locations Only</button>
+        <button (click)="toEdit()" mat-button color="warn">Edit Associations</button>
+    </div>
+</div>
+<div style="display:fixed;height:100%;width:8vw;top:20vh;left:0;background-color:cornflowerblue;float:left;"></div>
 <app-list *ngIf="userMode"></app-list>
 <app-wizard *ngIf="editMode"></app-wizard>
 <app-roles *ngIf="roleMode"></app-roles>

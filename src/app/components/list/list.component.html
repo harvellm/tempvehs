@@ -1,3 +1,5 @@
+<div class="mgh-table-container">
+
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
@@ -41,10 +43,12 @@
         *matRowDef="let row; columns: displayedColumns;"
     ></tr>
   </table>
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+  <div style="margin:10px 450px 0 0;">
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]"
     showFirstLastButtons 
     aria-label="Select page of periodic elements">
 </mat-paginator>
+  </div>
   <!-- <div>
     <h3>
       Click Log
@@ -60,3 +64,4 @@
       Clicked on {{clickedRow.id}}
     </li>
   </ul> -->
+</div>
