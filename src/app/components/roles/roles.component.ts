@@ -14,7 +14,7 @@ import { MatSort } from '@angular/material/sort';
 export class RolesComponent implements OnInit,AfterViewInit {
 
   constructor(private locationsService:DataSourceService, private stateService:StateService) { }
-
+  currentMode: string = '';
   public roles:MatTableDataSource<IRole> = new MatTableDataSource<IRole>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -25,6 +25,7 @@ export class RolesComponent implements OnInit,AfterViewInit {
          // data = this.users.data = data
          
       );
+      this.currentMode = this.stateService.currentMode;
   }
   rowClicked (row:IRole){
     if(this.clickedRows.has(row)) {

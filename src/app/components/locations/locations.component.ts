@@ -14,6 +14,7 @@ export class LocationsComponent implements OnInit,AfterViewInit {
   constructor(private locationsService:DataSourceService, private stateService:StateService) { }
 
   public locations:MatTableDataSource<ILocation> = new MatTableDataSource<ILocation>();
+  currentMode:string = '';
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   ngOnInit() {
@@ -23,6 +24,7 @@ export class LocationsComponent implements OnInit,AfterViewInit {
          // data = this.users.data = data
          
       );
+      this.currentMode = this.stateService.currentMode;
   }
   rowClicked (row:ILocation){
     if(this.clickedRows.has(row)) {

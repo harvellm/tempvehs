@@ -7,7 +7,7 @@
           <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
         </mat-form-field> -->
         <div class="stepControllerBlock">
-            <button class="mgh-button" mat-button matStepperNext>Next</button>
+            <button class="mgh-button" mat-raised-button  matStepperNext>Next</button>
         </div>
         <app-list></app-list>
 
@@ -21,8 +21,8 @@
                  required>
         </mat-form-field> -->
         <div>
-          <button class="mgh-button" mat-button matStepperPrevious>Back</button>
-            <button class="mgh-button" mat-button matStepperNext>Next</button>
+          <button class="mgh-button" mat-raised-button matStepperPrevious>Back</button>
+            <button class="mgh-button" mat-raised-button matStepperNext>Next</button>
  
          
         </div>
@@ -37,8 +37,8 @@
                    required>
           </mat-form-field> -->
           <div>
-            <button  class="mgh-button" mat-button matStepperPrevious>Back</button>
-            <button class="mgh-button" mat-button matStepperNext>Next</button>
+            <button  class="mgh-button" mat-raised-button matStepperPrevious>Back</button>
+            <button class="mgh-button" mat-raised-button matStepperNext>Next</button>
           </div>
           <app-locations></app-locations>
         </form>
@@ -46,8 +46,10 @@
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
       <div>
-        <button class="mgh-button" mat-button matStepperPrevious>Back</button>
-        <button class="mgh-button" mat-button (click)="stepper.reset()">Reset</button>
+        <button class="mgh-button" mat-raised-button matStepperPrevious>Back</button>
+        <button class="mgh-button" mat-raised-button (click)="stepper.reset()">Reset</button>
+        <button class="mgh-button" style="margin-left:40px;width:200px;" color="warn" mat-raised-button (click)="stepper.reset()">Submit Changes</button>
+
       </div>
       <app-summary></app-summary>
     </mat-step>

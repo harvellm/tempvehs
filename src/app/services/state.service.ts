@@ -29,6 +29,13 @@ export class StateService {
   private usersSource = new Subject<any>();
   usersObservable=this.usersSource.asObservable();
 
+  private currMode:string = 'user';
+  get currentMode(): string {
+    return this.currMode;
+  }
+  set currentMode(value:string){
+    this.currMode = value;
+  }
   get users()
   {
     return this.Users;

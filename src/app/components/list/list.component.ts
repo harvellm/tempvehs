@@ -2,9 +2,10 @@ import {AfterViewInit, Component, ViewChild, OnInit} from '@angular/core';
 import { IUser } from 'src/app/classes/user';
 import { DataSourceService } from 'src/app/services/data-source.service';
 import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import {MatTableDataSource, MatTable} from '@angular/material/table';
 import { StateService } from 'src/app/services/state.service';
 import { MatSort } from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-list',
@@ -14,10 +15,11 @@ import { MatSort } from '@angular/material/sort';
 export class ListComponent implements OnInit,AfterViewInit {
  
   constructor(private userService:DataSourceService, private stateService:StateService) { }
-
+  currentMode: string = '';
   public users:MatTableDataSource<IUser> = new MatTableDataSource<IUser>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatTable) table!: MatTable<IUser>;
   ngOnInit() {
       this.userService.getUsers()
       .subscribe(
@@ -25,6 +27,7 @@ export class ListComponent implements OnInit,AfterViewInit {
          // data = this.users.data = data
          
       );
+      this.currentMode = this.stateService.currentMode;
   }
   rowClicked (row:any){
     if(this.clickedRows.has(row)) {
@@ -50,4 +53,6 @@ export class ListComponent implements OnInit,AfterViewInit {
       this.users.paginator.firstPage();
     }
   }
+
+
 }

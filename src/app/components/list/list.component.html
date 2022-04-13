@@ -1,5 +1,17 @@
 <div class="mgh-table-container">
 
+  <div *ngIf = "currentMode === 'user'" class="demo-button-container">
+    <button mat-raised-button class="demo-button">
+      Add User
+    </button>
+    <button
+        mat-raised-button
+        [disabled]="!users.data.length"
+      
+        class="demo-button">
+      Remove Selected Users
+    </button>
+  </div>
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
