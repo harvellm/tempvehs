@@ -4,6 +4,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { ILocation } from 'src/app/classes/ilocation';
 import { StateService } from 'src/app/services/state.service';
+import { MatSort } from '@angular/material/sort';
 @Component({
   selector: 'app-locations',
   templateUrl: './locations.component.html',
@@ -14,6 +15,7 @@ export class LocationsComponent implements OnInit,AfterViewInit {
 
   public locations:MatTableDataSource<ILocation> = new MatTableDataSource<ILocation>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
   ngOnInit() {
       this.locationsService.getLocations()
       .subscribe(
@@ -32,7 +34,17 @@ export class LocationsComponent implements OnInit,AfterViewInit {
   }
   ngAfterViewInit() {
     this.locations.paginator = this.paginator;
+    this.locations.sort = this.sort;
   }
   displayedColumns: string[] = ['id','name'];
   clickedRows = new Set<ILocation>();
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.locations.filter = filterValue.trim().toLowerCase();
+
+    if (this.locations.paginator) {
+      this.locations.paginator.firstPage();
+    }
+  }
 }

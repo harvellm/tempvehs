@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSortModule} from '@angular/material/sort';
 import { SummaryComponent } from './components/summary/summary.component';
 
 
@@ -40,7 +41,8 @@ import { SummaryComponent } from './components/summary/summary.component';
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
