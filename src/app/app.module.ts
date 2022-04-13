@@ -13,6 +13,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { SummaryComponent } from './components/summary/summary.component';
 
 
 
@@ -22,7 +25,8 @@ import { MatInputModule } from '@angular/material/input';
     ListComponent,
     RolesComponent,
     LocationsComponent,
-    WizardComponent
+    WizardComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

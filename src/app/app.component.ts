@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  editMode:boolean = false;
+  editMode:boolean = true;
+  userMode:boolean = false;
+  roleMode:boolean = false;
+  locationMode:boolean = false;
 }

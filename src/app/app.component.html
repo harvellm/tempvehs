@@ -1,2 +1,4 @@
-<app-list *ngIf="editMode"></app-list>
-<app-wizard *ngIf="!editMode"></app-wizard>
+<app-list *ngIf="userMode"></app-list>
+<app-wizard *ngIf="editMode"></app-wizard>
+<app-roles *ngIf="roleMode"></app-roles>
+<app-locations *ngIf="locationMode"></app-locations>

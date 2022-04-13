@@ -3,13 +3,14 @@ import { DataSourceService } from 'src/app/services/data-source.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { ILocation } from 'src/app/classes/ilocation';
+import { StateService } from 'src/app/services/state.service';
 @Component({
   selector: 'app-locations',
   templateUrl: './locations.component.html',
   styleUrls: ['./locations.component.scss']
 })
 export class LocationsComponent implements OnInit,AfterViewInit {
-  constructor(private locationsService:DataSourceService) { }
+  constructor(private locationsService:DataSourceService, private stateService:StateService) { }
 
   public locations:MatTableDataSource<ILocation> = new MatTableDataSource<ILocation>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -20,6 +21,14 @@ export class LocationsComponent implements OnInit,AfterViewInit {
          // data = this.users.data = data
          
       );
+  }
+  rowClicked (row:ILocation){
+    if(this.clickedRows.has(row)) {
+      this.clickedRows.delete(row);
+    } else {
+      this.clickedRows.add(row);
+    }
+    this.stateService.locations = Array.from(this.clickedRows);
   }
   ngAfterViewInit() {
     this.locations.paginator = this.paginator;
