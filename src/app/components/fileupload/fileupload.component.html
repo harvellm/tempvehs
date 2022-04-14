@@ -1,0 +1,26 @@
+<div class="myformw-wrapper">
+    <mat-form-field style="width:350px;">
+
+        <div class="myfilebrowser">
+
+            <mat-toolbar>
+
+                <!-- Readonly Input to show File names -->
+                <input matInput [(ngModel)]="myfilename" readonly name="memberContactNo" />
+
+                <!-- Browse Button -->
+                <button mat-flat-button color="primary">
+                    Browse
+                </button>
+
+            </mat-toolbar>
+
+            <!-- Fetch selected filed on change -->
+            <input type="file" #UploadFileInput id="fileUpload" (change)="fileChangeEvent($event)" name="fileUpload"
+                accept="*.csv" />
+
+        </div>
+
+    </mat-form-field>
+
+</div>

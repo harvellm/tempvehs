@@ -13,12 +13,14 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatSortModule} from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSortModule } from '@angular/material/sort';
 import { SummaryComponent } from './components/summary/summary.component';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgxCsvParserModule } from 'ngx-csv-parser';
+import { FileuploadComponent } from './components/fileupload/fileupload.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { MatButtonModule } from '@angular/material/button';
     RolesComponent,
     LocationsComponent,
     WizardComponent,
-    SummaryComponent
+    SummaryComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatGridListModule,
     MatSortModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxCsvParserModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

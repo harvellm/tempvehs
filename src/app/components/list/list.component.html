@@ -1,29 +1,28 @@
 <div class="mgh-table-container">
 
-  <div *ngIf = "currentMode === 'user'" class="demo-button-container">
+  <div *ngIf="currentMode === 'user'" class="demo-button-container">
     <button mat-raised-button class="demo-button">
       Add User
     </button>
-    <button
-        mat-raised-button
-        [disabled]="!users.data.length"
-      
-        class="demo-button">
+    <button mat-raised-button [disabled]="!users.data.length" class="demo-button">
       Remove Selected Users
     </button>
   </div>
-<mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-</mat-form-field>
+  <div style="width:80%;text-align:right;" *ngIf="currentMode === 'edit'" class="demo-button-container">
+    <app-fileupload (uploadFileEvent)="uploadEventHander($event)"></app-fileupload>
+  </div>
+  <mat-form-field style="padding-left:10px;" appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
 
-<table matSort mat-table [dataSource]="users" class="mat-elevation-z8 demo-table">
+  <table matSort mat-table [dataSource]="users" class="mat-elevation-z8 demo-table">
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>id</th>
       <td mat-cell *matCellDef="let element">{{element.id}}</td>
     </ng-container>
-  
+
     <!-- Name Column -->
     <ng-container matColumnDef="first_name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
@@ -35,31 +34,25 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
       <td mat-cell *matCellDef="let element">{{element.last_name}}</td>
     </ng-container>
-     <!-- Name Column -->
-     <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
-        <td mat-cell *matCellDef="let element">{{element.email}}</td>
-      </ng-container>
-    
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+      <td mat-cell *matCellDef="let element">{{element.email}}</td>
+    </ng-container>
+
     <!-- Symbol Column -->
     <ng-container matColumnDef="random_buzzword">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Random Buzzword</th>
       <td mat-cell *matCellDef="let element">{{element.random_buzzword}}</td>
     </ng-container>
-  
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr
-        mat-row
-        (click)="rowClicked(row)"
-        [class.demo-row-is-clicked]="clickedRows.has(row)"
-        *matRowDef="let row; columns: displayedColumns;"
-    ></tr>
+    <tr mat-row (click)="rowClicked(row)" [class.demo-row-is-clicked]="clickedRows.has(row)"
+      *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   <div style="margin:10px 450px 0 0;">
-  <mat-paginator [pageSizeOptions]="[5, 10, 15]"
-    showFirstLastButtons 
-    aria-label="Select page of periodic elements">
-</mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
   </div>
   <!-- <div>
     <h3>

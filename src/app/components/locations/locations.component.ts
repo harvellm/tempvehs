@@ -49,4 +49,9 @@ export class LocationsComponent implements OnInit,AfterViewInit {
       this.locations.paginator.firstPage();
     }
   }
+  uploadEventHander($event: any) {
+    //this.userName = $event;
+    debugger;
+    console.dir($event);
+  }
 }

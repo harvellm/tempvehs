@@ -1,7 +1,7 @@
 <mat-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Select Users to Modify</ng-template>
+        <ng-template matStepLabel>Select Users to Modify <span class="selectedCounter">({{users.length}} selected)</span></ng-template>
         <!-- <mat-form-field appearance="fill">
           <mat-label>Name</mat-label>
           <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
@@ -13,8 +13,9 @@
 
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Select Role(s) to Add To Users">
+    <mat-step [stepControl]="secondFormGroup">
       <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Select Role(s) to Add To Users <span class="selectedCounter">({{roles.length}} selected)</span></ng-template>
         <!-- <mat-form-field appearance="fill">
           <mat-label>Address</mat-label>
           <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
@@ -29,8 +30,9 @@
         <app-roles></app-roles>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Select Locations(s) to Add To Users">
+    <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Select Locations(s) to Add To Users <span class="selectedCounter">({{locations.length}} selected)</span></ng-template>
           <!-- <mat-form-field appearance="fill">
             <mat-label>Address</mat-label>
             <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"

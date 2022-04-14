@@ -11,6 +11,9 @@
       Remove Selected Locations
     </button>
   </div>
+  <!-- <div *ngIf="currentMode === 'edit'" class="demo-button-container">
+    <app-fileupload (uploadFileEvent)="uploadEventHander($event)"></app-fileupload>
+  </div> -->
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
